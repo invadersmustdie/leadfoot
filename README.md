@@ -34,23 +34,23 @@ A tiny and dead simple benchmarking suite
 
 ### Example
 
-  series "my first series" do
-    setup do
-      @x = 2
-    end
+    series "my first series" do
+      setup do
+        @x = 2
+      end
 
-    measure "gimme 5" do
-      @x + 3
-    end
+      measure "gimme 5" do
+        @x + 3
+      end
 
-    measure "2 seconds" do
-      sleep 2
-    end
+      measure "2 seconds" do
+        sleep 2
+      end
 
-    measure "fail on error" do
-      raise "foo"
+      measure "fail on error" do
+        raise "foo"
+      end
     end
-  end
 
 ### Result
 
@@ -60,5 +60,3 @@ A tiny and dead simple benchmarking suite
     |    0.0000 secs | gimme 5
     |    2.0023 secs | 2 seconds
     |         failed | fail on error
-
-
