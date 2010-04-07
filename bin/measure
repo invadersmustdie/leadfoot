@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'leadfoot'
+require 'leadfoot/dsl'
+
+include Leadfoot::DSL
+
+ARGV.grep(/\.ms$/).each do |ms|
+  puts "loading #{ms}"
+  load ms
+end
