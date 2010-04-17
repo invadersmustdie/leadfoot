@@ -8,7 +8,8 @@ spec = Gem::Specification.new do |s|
   s.email           = "rugek@dirtyhack.net"
   s.platform        = Gem::Platform::RUBY
   s.summary         = "A tiny and dead simple benchmarking suite"
-  s.files           = FileList["{lib,sample}/**/*"]
+  s.files           = FileList["{bin,lib,sample}/**/*"]
+  s.executables     = ['measure']
   s.require_path    = "lib"
 end
 
